@@ -1,0 +1,391 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Grid principal da página */
+.pagina {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Topo (Menu e Logo) */
+.topo {
+    background-color: #1b2a47;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    padding: 16px 32px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 36px;
+    height: 36px;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.menu a {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+.menu a.ativo {
+    background-color: #f97316;
+    color: #ffffff;
+}
+
+/* Área de Conteúdo Central */
+.conteudo {
+    padding: 32px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.rodape {
+    background-color: #1b2a47;
+    color: #94a3b8;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.875rem;
+}
+
+/* Painel de Métricas Superior */
+.painel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.numero {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.numero img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.numero .valor {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.numero .rotulo {
+    color: #6c757d;
+}
+
+/* Título e Barra de Busca */
+.titulo-pagina {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.busca {
+    display: grid;
+    grid-template-columns: 240px auto;
+    gap: 8px;
+}
+
+.busca input {
+    padding: 10px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+/* Botões Globais */
+.botao {
+    background-color: #f97316;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.botao-pequeno {
+    padding: 4px 12px;
+    font-size: 13px;
+}
+
+.botao-claro {
+    background: #e6e9f0;
+    color: #1d2435;
+}
+
+.botao-claro:hover {
+    background: #d5dae5;
+}
+
+.botao-perigo {
+    background: #d64541;
+    color: #ffffff;
+}
+
+.botao-perigo:hover {
+    background: #b9322f;
+}
+
+/* Mensagens de Avisos e Erros */
+.aviso {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #fff3cd;
+    color: #856404;
+    margin-bottom: 20px;
+}
+
+.aviso.erro {
+    background: #fde2e1;
+    color: #a12622;
+}
+
+/* Vitrine de Produtos (Cards) */
+.vitrine {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.card img {
+    justify-self: center;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.card p {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+.preco {
+    color: #e27d60;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Tabelas (Listagens) */
+.tabela {
+    overflow-x: auto;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #e9ecef;
+    text-align: left;
+}
+
+th {
+    background: #f7f8fb;
+    color: #5b6478;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+tr:last-child td {
+    border-bottom: 0;
+}
+
+.acoes-tabela {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 6px;
+}
+
+.contador {
+    color: #5b6478;
+    font-size: 14px;
+    margin-top: 12px;
+}
+
+/* Formulários e Caixas de Confirmação */
+.caixa {
+    display: grid;
+    gap: 18px;
+    max-width: 620px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.formulario {
+    display: grid;
+    gap: 14px;
+}
+
+.campo {
+    display: grid;
+    gap: 4px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    padding: 10px 12px;
+    border: 1px solid #c8cfdc;
+    border-radius: 8px;
+    background: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: #f28c28;
+    outline: 2px solid #f28c28;
+}
+
+.dica {
+    color: #5b6478;
+    font-size: 13px;
+}
+
+.previa {
+    width: 120px;
+    height: 120px;
+    padding: 8px;
+    border: 1px dashed #c8cfdc;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.acoes {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    gap: 10px;
+}
+
+/* Células de Produtos nas Tabelas */
+.miniatura {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.nome-produto {
+    font-weight: bold;
+}
+
+.descricao-produto {
+    color: #5b6478;
+    font-size: 14px;
+}
+
+/* Tabela de Vendas e Resumos */
+.produto-celula {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.produto-celula img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.total-geral {
+    justify-self: end;
+    padding: 12px 18px;
+    border-radius: 10px;
+    background: #1f2a44;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.resumo {
+    display: grid;
+    gap: 6px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: #f3f5f9;
+}
